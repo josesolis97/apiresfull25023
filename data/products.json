@@ -1,0 +1,127 @@
+
+
+{
+  "products": [
+    {
+      "name": "Balón de Fútbol Profesional",
+      "description": "Balón oficial de la liga, tamaño 5, termosellado.",
+      "price": 85000,
+      "category": "futbol",
+      "stock": 30,
+      "imageUrl": "https://example.com/balon_futbol.jpg",
+      "active": true,
+      "createdAt": "2024-01-15T10:30:00.000Z",
+      "updatedAt": "2024-01-15T10:30:00.000Z"
+    },
+    {
+      "name": "Guayos de Fútbol Pro",
+      "description": "Guayos ligeros para máxima velocidad en césped natural.",
+      "price": 250000,
+      "category": "futbol",
+      "stock": 20,
+      "imageUrl": "https://example.com/guayos.jpg",
+      "active": true,
+      "createdAt": "2024-01-15T10:30:00.000Z",
+      "updatedAt": "2024-01-15T10:30:00.000Z"
+    },
+    {
+      "name": "Camiseta de Entrenamiento",
+      "description": "Camiseta con tecnología de secado rápido.",
+      "price": 65000,
+      "category": "indumentaria",
+      "stock": 100,
+      "imageUrl": "https://example.com/camiseta_entrenamiento.jpg",
+      "active": true,
+      "createdAt": "2024-02-01T09:00:00.000Z",
+      "updatedAt": "2024-02-01T09:00:00.000Z"
+    },
+    {
+      "name": "Balón de Baloncesto Pro",
+      "description": "Balón de cuero compuesto, ideal para interiores y exteriores.",
+      "price": 95000,
+      "category": "baloncesto",
+      "stock": 25,
+      "imageUrl": "https://example.com/balon_baloncesto.jpg",
+      "active": true,
+      "createdAt": "2024-02-10T14:20:00.000Z",
+      "updatedAt": "2024-02-10T14:20:00.000Z"
+    },
+    {
+      "name": "Zapatillas de Baloncesto",
+      "description": "Zapatillas con alta amortiguación y soporte para el tobillo.",
+      "price": 320000,
+      "category": "baloncesto",
+      "stock": 15,
+      "imageUrl": "https://example.com/zapatillas_baloncesto.jpg",
+      "active": true,
+      "createdAt": "2024-02-11T15:00:00.000Z",
+      "updatedAt": "2024-02-11T15:00:00.000Z"
+    },
+    {
+      "name": "Medias Deportivas (Pack 3)",
+      "description": "Medias de algodón para alto rendimiento.",
+      "price": 35000,
+      "category": "indumentaria",
+      "stock": 150,
+      "imageUrl": "https://example.com/medias.jpg",
+      "active": true,
+      "createdAt": "2024-03-05T18:00:00.000Z",
+      "updatedAt": "2024-03-05T18:00:00.000Z"
+    },
+    {
+      "name": "Gorra Deportiva",
+      "description": "Gorra con protección UV y banda para el sudor.",
+      "price": 45000,
+      "category": "accesorios",
+      "stock": 80,
+      "imageUrl": "https://example.com/gorra.jpg",
+      "active": true,
+      "createdAt": "2024-03-10T10:00:00.000Z",
+      "updatedAt": "2024-03-10T10:00:00.000Z"
+    },
+    {
+      "name": "Espinilleras de Carbono",
+      "description": "Protección ligera y resistente para fútbol.",
+      "price": 75000,
+      "category": "futbol",
+      "stock": 40,
+      "imageUrl": "https://example.com/espinilleras.jpg",
+      "active": true,
+      "createdAt": "2024-03-12T12:00:00.000Z",
+      "updatedAt": "2024-03-12T12:00:00.000Z"
+    },
+    {
+      "name": "Sudadera con Capucha",
+      "description": "Sudadera de felpa para confort después del entrenamiento.",
+      "price": 180000,
+      "category": "indumentaria",
+      "stock": 60,
+      "imageUrl": "https://example.com/sudadera.jpg",
+      "active": true,
+      "createdAt": "2024-03-15T16:45:00.000Z",
+      "updatedAt": "2024-03-15T16:45:00.000Z"
+    },
+    {
+      "name": "Termo de Agua 1L",
+      "description": "Termo de acero inoxidable para mantener tus bebidas frías.",
+      "price": 55000,
+      "category": "accesorios",
+      "stock": 120,
+      "imageUrl": "https://example.com/termo.jpg",
+      "active": true,
+      "createdAt": "2024-03-20T11:30:00.000Z",
+      "updatedAt": "2024-03-20T11:30:00.000Z"
+    },
+    {
+      "name": "Uniforme de Baloncesto Reversible",
+      "description": "Conjunto de camiseta y pantalón, dos colores en uno.",
+      "price": 150000,
+      "category": "baloncesto",
+      "stock": 30,
+      "imageUrl": "https://example.com/uniforme_baloncesto.jpg",
+      "active": true,
+      "createdAt": "2024-03-22T13:00:00.000Z",
+      "updatedAt": "2024-03-22T13:00:00.000Z"
+    }
+  ]
+}
