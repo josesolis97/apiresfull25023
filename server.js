@@ -55,7 +55,7 @@ app.get('/', (req, res) => {
       <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
       <!-- 🔗 Meta para compartir -->
-      <meta property="og:title" content="Examen de API RESTful de Productos" />
+      <meta property="og:title" content="Examen - API RESTful de Productos" />
       <meta property="og:description" content="Examen de API RESTful de Productos de Jose Antonio Solis" />
       <meta property="og:image" content="https://apiresfull25023.vercel.app/api-preview.png" />
       <meta property="og:url" content="https://apiresfull25023.vercel.app/" />
