@@ -20,22 +20,6 @@ class ProductService {
     };
   }
 
-  async function patchProduct(id, partialData) {
-  const productRef = db.collection('products').doc(id);
-
-  const doc = await productRef.get();
-  if (!doc.exists) return null;
-
-  await productRef.update({
-    ...partialData,
-    updatedAt: new Date().toISOString()
-  });
-
-  const updatedDoc = await productRef.get();
-  return { id: updatedDoc.id, ...updatedDoc.data() };
-}
-
-
   async getProductById(id) {
     return await productRepository.getById(id);
   }
