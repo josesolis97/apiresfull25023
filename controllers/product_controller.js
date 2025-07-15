@@ -60,6 +60,27 @@ class ProductController {
     }
   }
 
+  async patchProduct(req, res, next) {
+  try {
+    const { id } = req.params;
+    const partialData = req.body;
+
+    const updatedProduct = await productService.patchProduct(id, partialData);
+
+    if (!updatedProduct) {
+      return next(new NotFoundError(`Producto con id '${id}' no encontrado para actualizar parcialmente.`));
+    }
+
+    res.status(200).json({
+      success: true,
+      message: 'Producto actualizado parcialmente con éxito.',
+      data: updatedProduct
+    });
+  } catch (error) {
+    next(error);
+  }
+}
+
   async deleteProduct(req, res, next) {
     try {
       const { id } = req.params;
