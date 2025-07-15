@@ -15,6 +15,7 @@ router.get('/:id', productController.getProductById); // GET /api/products/some-
 // Rutas protegidas que requieren autenticación y rol de administrador
 router.post('/', authenticate, isAdmin, validate(createProductSchema), productController.createProduct);       // POST /api/products
 router.put('/:id', authenticate, isAdmin, validate(updateProductSchema), productController.updateProduct);    // PUT /api/products/some-id
+router.patch('/:id', productController.patchProduct);
 router.delete('/:id', authenticate, isAdmin, productController.deleteProduct); // DELETE /api/products/some-id
 
 // Rutas con soporte para subida de imágenes
