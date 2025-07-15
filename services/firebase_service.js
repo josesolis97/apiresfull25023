@@ -107,31 +107,6 @@ class FirebaseService {
       throw new Error(`Error al actualizar producto en Firebase: ${error.message}`);
     }
   }
-  async patchProduct(id, partialData) {
-  this.initialize();
-
-  try {
-    const docRef = this.db.collection('products').doc(id);
-    const doc = await docRef.get();
-
-    if (!doc.exists) {
-      throw new Error('Producto no encontrado');
-    }
-
-    const patchData = {
-      ...partialData,
-      updatedAt: new Date().toISOString()
-    };
-
-    await docRef.update(patchData);
-
-    const updatedDoc = await docRef.get();
-    return { id: updatedDoc.id, ...updatedDoc.data() };
-  } catch (error) {
-    throw new Error(`Error al hacer patch del producto: ${error.message}`);
-  }
-}
-
 
   async deleteProduct(id) {
     this.initialize();
@@ -155,3 +130,4 @@ class FirebaseService {
 }
 
 module.exports = new FirebaseService();
+
