@@ -20,7 +20,7 @@ const PORT = process.env.PORT || 3000;
 // Configuración de seguridad
 app.use(helmet());
 app.use(cors({
-  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['https://curso-react-js-25236-git-main-jose-solis-api.vercel.app','*'],
+  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['*'],
   credentials: true
 }));
 
