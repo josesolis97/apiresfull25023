@@ -18,11 +18,22 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Configuración de seguridad
-app.use(helmet());
+const allowedOrigins = process.env.ALLOWED_ORIGINS
+  ? process.env.ALLOWED_ORIGINS.split(',')
+  : ['https://curso.admcas.com.ar']; // coloca tu frontend aquí
+
 app.use(cors({
-  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['*'],
+  origin: function(origin, callback) {
+    if (!origin) return callback(null, true); // Postman o server-side requests
+    if (allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('No permitido por CORS'));
+    }
+  },
   credentials: true
 }));
+
 
 // Rate limiting
 const limiter = rateLimit({
