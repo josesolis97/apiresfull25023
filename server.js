@@ -17,6 +17,7 @@ const errorHandler = require('./middleware/error_handler');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.set('trust proxy', 1);
 // Configuración de seguridad
 const allowedOrigins = process.env.ALLOWED_ORIGINS
   ? process.env.ALLOWED_ORIGINS.split(',')
