@@ -1,5 +1,34 @@
 const productRepository = require('../repositories/product_repository');
 
+
+module.exports = async function handler(req, res) {
+  // ✅ CORS manual
+  res.setHeader('Access-Control-Allow-Origin', 'https://curso.admcas.com.ar');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
+  try {
+    if (req.method === 'GET') {
+      const filters = {
+        page: req.query.page || 1,
+        limit: req.query.limit || 10
+      };
+      const result = await productService.getAllProducts(filters);
+      res.status(200).json(result);
+    } else {
+      res.status(405).json({ error: 'Método no permitido' });
+    }
+  } catch (error) {
+    console.error('Error en /api/products:', error);
+    res.status(500).json({ error: 'Error interno del servidor' });
+  }
+};
+
 class ProductService {
   async getAllProducts(filters = {}) {
     // Aquí podrías agregar lógica de negocio, como cacheo, etc.
