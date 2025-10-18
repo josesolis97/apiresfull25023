@@ -20,7 +20,7 @@ const PORT = process.env.PORT || 3000;
 // Configuración de seguridad
 const allowedOrigins = process.env.ALLOWED_ORIGINS
   ? process.env.ALLOWED_ORIGINS.split(',')
-  : ['https://curso.admcas.com.ar']; // coloca tu frontend aquí
+  : ['https://curso.admcas.com.ar', 'http://curso.admcas.com.ar']; // coloca tu frontend aquí
 
 app.use(cors({
   origin: function(origin, callback) {
