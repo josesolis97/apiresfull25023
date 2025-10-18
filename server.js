@@ -20,7 +20,7 @@ const PORT = process.env.PORT || 3000;
 // Configuración de seguridad
 app.use(helmet());
 app.use(cors({
-  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],
+  origin: process.env.ALLOWED_ORIGINS?.split(',') || ['curso25236react.netlify.app'],
   credentials: true
 }));
 
