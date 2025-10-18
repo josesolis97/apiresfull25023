@@ -19,20 +19,14 @@ const PORT = process.env.PORT || 3000;
 
 app.set('trust proxy', 1);
 // Configuración de seguridad
-const allowedOrigins = process.env.ALLOWED_ORIGINS
-  ? process.env.ALLOWED_ORIGINS.split(',')
-  : ['https://curso.admcas.com.ar', 'http://curso.admcas.com.ar']; // coloca tu frontend aquí
-
 app.use(cors({
-  origin: function(origin, callback) {
-    if (!origin) return callback(null, true); // Postman o server-side requests
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('No permitido por CORS'));
-    }
-  },
-  credentials: true
+  origin: '*', // Permite todos los orígenes
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: false // Cambiar a false cuando origin es '*'
+}));
+app.use(helmet({
+  crossOriginResourcePolicy: { policy: "cross-origin" }
 }));
 
 
